@@ -1,341 +1,378 @@
-/* Define Global Css*/
+/* Global */
+
 body {
-  font-family: 'Roboto' , sans-serif;
-  font-weight: 700;
-  color: #000000; 
-  line-height: 1.5;
-  margin: 0; 
- }
- 
- /* Define Default Global Font Sizes */
- 
- h1 {
-     font-size: 40px;
- }
- 
- h2 {
-     font-size: 32px;
- }
- 
- h3 {
-     font-size: 24px;
- }
- 
- h4 {
-     font-size: 18px;
- }
- 
- h5 {
-     font-size: 16px;
- }
- 
- p {
-     font-size: 16px;
-     font-weight: 400;
- }
- 
- a {
-     font-size: 16px;
-     font-weight: 400;
-     color: #000000;
-     text-decoration: none;
- }
- 
- a:hover {
-     text-decoration: underline;
- }
- 
- /*Define Global Helper Styles*/
- 
- .center {
-     text-align: center;
- }
- 
- .margin-bottom_five {
-     margin-bottom: 5px;
- }
- 
- .link {
-     text-decoration: underline;
- }
- 
- .link:hover {
-     text-decoration: none;
- }
- 
- .margin-top_zero {
-     margin-top: 0;
- }
- 
- .hero-container_sub-copy {
-     font-weight: 400;
- }
- 
- /*Define Navigation Styles*/
- 
- nav {
-     background-color: #ffffff;
-     display: flex;
-     flex-direction: row wrap;
-     justify-content: flex-end;
-     padding-right: 20px;
-     position: sticky;
-     top: 0;
- }
- 
- .nav-link {
-     display: flex;
-     padding: 20px;
- }
- 
- .nav-mobile {
-   display: none;
- }
- 
- #menuToggle
- {
-   display: block;
-   position: relative;
-   top: 10px;
-   left: 10px;
-   z-index: 1;
-   -webkit-user-select: none;
-   user-select: none;
-   margin: 20px 20px 30px 20px;
- }
- 
- #menuToggle a
- {
-   text-decoration: none;
-   color: #000000;
-   transition: color 0.3s ease;
- }
- 
- 
- #menuToggle input
- {
-   display: block;
-   width: 40px;
-   height: 32px;
-   position: absolute;
-   top: -7px;
-   left: -5px;
-   cursor: pointer;
-   opacity: 0; /* hide this */
-   z-index: 2; /* and place it over the hamburger */
-   
-   -webkit-touch-callout: none;
- }
- 
- /*
-  * Just a quick hamburger
-  */
- #menuToggle span
- {
-   display: block;
-   width: 33px;
-   height: 4px;
-   margin-bottom: 5px;
-   position: relative;
-   background: #000000;
-   border-radius: 3px;
-   z-index: 1;
-   transform-origin: 4px 0px;
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-               opacity 0.55s ease;
- }
- 
- #menuToggle span:first-child
- {
-   transform-origin: 0% 0%;
- }
- 
- #menuToggle span:nth-last-child(2)
- {
-   transform-origin: 0% 100%;
- }
- 
- /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
- #menuToggle input:checked ~ span
- {
-   opacity: 1;
-   transform: rotate(45deg) translate(-2px, -1px);
-   background: #000000;
- }
- 
- /*
-  * But let's hide the middle one.
-  */
- #menuToggle input:checked ~ span:nth-last-child(3)
- {
-   opacity: 0;
-   transform: rotate(0deg) scale(0.2, 0.2);
- }
- 
- /*
-  * Ohyeah and the last one should go the other direction
-  */
- #menuToggle input:checked ~ span:nth-last-child(2)
- {
-   transform: rotate(-45deg) translate(0, -1px);
- }
- 
- /*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
- #menu
- {
-   position: absolute;
-   width: 300px;
-   margin: -100px 0 0 -50px;
-   padding: 50px;
-   padding-top: 125px;
-   
-   background: #ededed;
-   list-style-type: none;
-   -webkit-font-smoothing: antialiased;
-   /* to stop flickering of text in safari */
-   
-   transform-origin: 0% 0%;
-   transform: translate(-100%, 0);
-   
-   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
- }
- 
- #menu li
- {
-   padding: 10px 0;
-   font-size: 22px;
- }
- 
- /*
-  * And let's slide it in from the left
-  */
- #menuToggle input:checked ~ ul
- {
-   transform: none;
- }
- /* Define Hero Styles */
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.5;
+    margin: 0;
+  }
   
- .hero-container {
-     background-color: #f2f2f2;
-     display: flex;
-     align-items: center;
-     margin-bottom: 60px;
- }
- 
- .hero-container_img {
+  /* Global Font */
+  
+  h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 32px;
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  
+  h4 {
+    font-size: 18px;
+  }
+  
+  h5 {
+    font-size: 16px;
+  }
+  
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Global Helpers */
+  
+  .center {
+    text-align: center;
+  }
+  
+  .margin-bottom_five {
+    margin-bottom: 5px;
+  }
+  
+  .link {
+    text-decoration: underline;
+    color: #000;
+  }
+  
+  .link:hover {
+    text-decoration: none;
+  }
+  
+  .margin-top_zero {
+    margin-top: 0;
+  }
+  
+  .hero-container_sub-copy {
+    font-weight: 400;
+  }
+  
+  /* Navigation */
+  
+  nav {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: flex-begin;
+    padding-right: 20px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .nav-link {
+    display: flex;
+    padding: 20px;
+  }
+  
+  /* Hero */
+  
+  .hero-container {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .hero-container_img {
     width: 40%;
- }
- 
- .hero-container_img img {
-     width: 100%;
- }
- 
- .hero-container_copy {
-     width: 60%;
-     padding: 5%;
- }
- 
- /* Define Card Styles */
- 
- .card-container {
-     display: flex;
-     flex-flow: row wrap;
-     justify-content: center;
-     margin: auto auto 60px auto;
-     max-width: 1000px;
- }
- 
- .card {
-     background-color: #f2f2f2;
-     width: 40%;
-     margin: 20px;
- }
- 
- .card a:hover {
-     text-decoration: none;
- }
- 
- .card-copy {
-     padding: 0 20px 20px 20px;
- }
- 
- footer {
-     background-color: #f2f2f2;
-     text-align: center;
-     padding: 40px;
- }
- 
- .copyright {
-     font-size: 10px;
-     margin-top: 30px;
- }
- 
- /*Define Media Queries Which Tell the Code How Resize*/
- 
- @media screen and (max-width: 768px) {
-   .nav-mobile {
-     display: block;
-   }
- 
-     h1 {
-         font-size: 24px;
-     }
- 
-     h2 {
-         font-size: 18px;
-     }
- 
-     .hero-container {
-         display: flex;
-         flex-direction: column;
-     }
- 
-     .hero-container_img {
-         min-width: 100%;
-     }
- 
-     .hero-container_copy {
-         min-width: 100%;
-         margin: 20px;
-         padding: 0;
-         text-align: center;
-     }
- 
- }
- 
- @media screen and (max-width: 1024px) {
-     nav {
-         display: none;
-     }
-     .nav-mobile {
-     display: block;
-     }
-   
-     p {
-         font-size: 14px;
-     }
- 
-     .hero-container_img {
-         width: 50%;
-     }
- 
-     .hero-container_copy {
-         width: 50%;
-     }
- 
-     .card {
-             width: 100%;
-         }
- 
-     .card img {
-         width: 100%;
-     }
- }
- 
+    border-radius: 50%;
+    background: #21856e;
+    margin-left: 20px;
+  }
+  
+  .hero-container_img img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .hero-container_copy {
+    width: 60%;
+    padding: 5%;
+  }
+  
+  /* Responsive Card */
+  
+  .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 380px;
+    background: #fff;
+    margin: 20px;
+    margin-top: 100px;
+  }
+  
+  .container .img-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: #F68E48;
+  }
+  
+  .container .img-container::before {
+    content: "Rescue Rovers";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    color: #000;
+    opacity: 0.2;
+    font-size: 8em;
+    font-weight: 800;
+  }
+  
+  .container .img-container img {
+    position: relative;
+    width: 400px;
+    transform: rotate(30deg);
+    right: -50px;
+    transition: 0.9s linear;
+  }
+  
+  .container .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+  }
+  
+  .container .details h2 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1em;
+    color: #444;
+  }
+  
+  .container .details h2 span {
+    font-size: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-left: 20px;
+  }
+  
+  .container .details p {
+    max-width: 85%;
+    /*   margin-right: 15%; */
+    color: #333;
+    /*   font-size: 15px; */
+    margin-bottom: 36px;
+  }
+  
+  /* .container .details h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    color: #a2a2a2;
+    float: left;
+  } */
+  
+  .container .details button {
+    background: #fff;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 8px;
+    float: right;
+  }
+  
+  /* responsive part */
+  @media (max-width: 1080px) {
+    .container {
+      height: auto;
+    }
+  
+    .container .img-container {
+      padding: 40px;
+      box-sizing: border-box;
+      width: 100% !important;
+      height: auto;
+      text-align: center;
+      overflow: hidden;
+    }
+  
+    .container .img-container img {
+      left: initial;
+      max-width: 100%;
+      transform: rotate(0deg);
+    }
+  
+    .details {
+      width: 100% !important;
+      height: auto;
+      padding: 20px;
+    }
+  }
+  
+  /* Cards */
+  
+  .cards {
+    margin: 20px;
+    margin-top: 100px;
+    /*   max-width: 1000px; */
+    display: grid;
+    /*   grid-template-columns: repeat(auto-fill,     minmax(225px, 1fr));
+    grid-template-rows: 1fr 1fr; */
+    gap: 20px;
+  }
+  .card {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card__image {
+    width: 100%;
+    display: block;
+  }
+  
+  .card__content {
+    /* line-height: 1.5;
+    font-size: 0.9em; */
+    padding: 15px;
+    background: #fafafa;
+  }
+  
+  /* .card__content > p:first-of-type {
+    margin-top: 0;
+  }
+  
+  .card__content > p:last-of-type {
+    margin-bottom: 0;
+  } */
+  
+  .card__info {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eeeeee;
+    /* font-size: 0.8em; */
+    border-bottom: 2px solid #cccccc;
+  }
+  /* .card__link {
+    color: #fff;
+    text-decoration: none;
+  }
+  .card__link:hover {
+    text-decoration: underline;
+  } */
+  .cards .card__info button {
+    background: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  
+  .card a:hover {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 40px;
+}
+
+.copyright {
+    font-size: 10px;
+    margin-top: 30px;
+}
+
+/* Resizing Properties */
+@media screen and (max-width: 768px) {
+
+      h1 {
+          font-size: 24px;
+      }
+  
+      h2 {
+          font-size: 18px;
+      }
+  
+      .hero-container {
+          display: flex;
+          flex-direction: column;
+      }
+  
+      .hero-container_img {
+          min-width: 100%;
+      }
+  
+      .hero-container_copy {
+          min-width: 100%;
+          margin: 20px;
+          padding: 0;
+          text-align: center;
+      }
+  
+  }
+  
+  @media screen and (max-width: 1024px) {
+    
+      p {
+          font-size: 14px;
+      }
+  
+      .hero-container_img {
+          width: 50%;
+      }
+  
+      .hero-container_copy {
+          width: 50%;
+      }
+  
+      .card {
+              width: 100%;
+          }
+  
+      .card img {
+          width: 100%;
+      }
+  }
